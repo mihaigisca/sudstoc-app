@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #292524;
+  color: #fafaf9;
+  font-family: "Sono", sans-serif;
+  padding: 24px 24px;
+}
+
+/* MAIN LAYOUT */
+/* this was the top element before */
+/* now in REACT it is an id attribute set to root; for id, # is used instead of . */
+#root {
+  max-width: 1500px;
+  margin: 0 0;
+}
+
+.header {
+  margin-bottom: 10px;
+}
+
+.header .wrapper {
+  margin: 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo img {
+  width: 68px;
+  height: 68px;
+}
+
+.wrapper .navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation li {
+  font-size: 30px;
+  list-style: none;
+  display: flex;
+  gap: 0.1rem;
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  position: relative;
+}
+
+.navigation li:hover {
+  background-color: #44403c;
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 42px;
+  text-transform: uppercase;
+  font-family: "Sono", sans-serif;
+  line-height: 1;
+  margin-top: 6px; /* hack for the font height */
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+.contacts-box {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contacts-field {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* unlock below after deploy to visualize well on mobile */
+@media (max-width: 900px) {
+  body {
+    padding: 8px 8px;
+  }
+
+  .header .wrapper {
+    flex-direction: column;
+  }
+
+  .wrapper .navigation {
+    flex-direction: column;
+  }
+
+  .navigation li {
+    font-size: 24px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .contacts-box {
+    font-size: 12px;
+  }
+
+  .contacts-field {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 8px 8px;
+  }
+
+  .header .wrapper {
+    flex-direction: column;
+  }
+
+  .wrapper .navigation {
+    flex-direction: column;
+  }
+
+  .navigation li {
+    font-size: 24px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .contacts-box {
+    font-size: 12px;
+  }
+
+  .contacts-field {
+    gap: 8px;
+  }
+}
